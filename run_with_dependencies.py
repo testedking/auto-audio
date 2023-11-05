@@ -1,4 +1,14 @@
 import subprocess
+import json
+
+# Define the 'app' variable to be used
+print("Input Process ID here")
+app = input("e.g. Spotify.exe, AMPLibraryAgent.exe, firefox.exe: ")
+
+# Update the 'app' variable in the 'app.json' file
+config = {"app": app}
+with open("app.json", "w") as config_file:
+    json.dump(config, config_file)
 
 # Define a function to run the dependency installation script
 def run_dependency_installation():

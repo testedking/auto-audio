@@ -17,7 +17,11 @@ game = str()
 executable_name = str()
 gameState = str()
 CurrentVolume = str("louder")
-app = "AMPLibraryAgent.exe"
+
+# Load 'app' variable from 'app.json'
+with open("app.json", "r") as config_file:
+    config = json.load(config_file)
+app = config.get("app", "Spotify.exe")
 
 # Load the game names, executable names, and screenshot regions from the app_region_presets.json file
 with open("app_region_presets.json", "r") as file:
@@ -30,7 +34,8 @@ active_app_flag = False
 last_check_time = 0
 
 os.system("cls")
-print("Starting ")
+print("Starting")
+print("Controlling volume for " + app)
 while True:
     start_time = time.time()
 
