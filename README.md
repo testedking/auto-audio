@@ -11,3 +11,8 @@ To change which app's volume is controlled change the Process ID stored in app.j
 Check app_region_presets.json to adjust scanning zones. The zones are stored in the following format: \[x, y, width, height\]
 To change volume values check app_settings.json. They are sorted by game>application>volume.
 Theoretically this program is quite easily scalable and you should be able to semi-easily add support for any game/games that are not already supported.
+## Currently supported games:
+Fortnite
+## Game Support WIP
+Valorant
+Counter-Strike 2
